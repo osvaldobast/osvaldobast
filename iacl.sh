@@ -20,16 +20,12 @@ chown root:GRP_VEN /ven
 chown root:GRP_SEC /sec
 
 
-useradd carlos -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd mariana -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd joao -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd debora -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd sebastiana -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd roberto -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd josefina -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd amanda -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-useradd rogerio -m -s /bin/bash -p $(openssl passwd -crypt Senha123)
-
-usermod -g GRP_ADM carlos mariana joao
-usermod -g GRP_VEN debora sebastiana roberto
-usermod -g GRP_SEC josefina amanda rogerio
+useradd carlos -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_ADM
+useradd mariana -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_ADM
+useradd joao -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_ADM
+useradd debora -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_VEN
+useradd sebastiana -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_VEN
+useradd roberto -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_VEN
+useradd josefina -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_SEC
+useradd amanda -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_SEC
+useradd rogerio -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -g GRP_SEC
